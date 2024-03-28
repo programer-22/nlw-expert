@@ -86,6 +86,11 @@ for (const item of Perguntas) {
       if (estaCorreta) {
         corretas.add(item);
         mostrarTotal.textContent = corretas.size + " de " + totalDePerguntas;
+      } else {
+        const inputIncorreto = dt
+          .querySelector("input")
+          .classList.add("errado");
+        mostrarTotal.textContent = corretas.size + " de " + totalDePerguntas;
       }
     };
 
